@@ -17,7 +17,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.icon{
+    user-select: none;
+}
 
 body{
     font-weight: 400;
@@ -66,15 +68,31 @@ header.heading
     animation: rotation 10s infinite cubic-bezier(0.32, 0.50, 0.50, 0.96);
 }
 
-.heading .heading-menu,
-.bg_m_effect
+.heading .heading-icons
+{
+    display: flex;
+    color: var(--primary-clr);
+    font-size: 16px;
+}
+
+/* .heading .heading-icons .heading-share
+{
+    
+} */
+
+.heading .heading-icons .heading-menu
 {
     display: none;
+}
+
+.bg_m_effect
+{
+    
     position: relative;
     color: var(--primary-clr);
 }
 
-.heading .heading-menu::after,
+
 .bg_m_effect::after
 {
     content:"";
@@ -230,14 +248,12 @@ section.all-continents.hide
 {
     font-size: 13px;
     text-decoration: none;
-    color: #fff;
-    background: #000000;
+    color:var(--primary-clr);
+    background-color: #dfe2ff;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     width: 80%;
     display: none;
-
-    transform: scale(1);
     transition: all 0.15s;
 }
 
@@ -269,7 +285,8 @@ section.all-continents.hide
 
 .all-continents .continent .continent-data .btn-goto:active
 {
-  transform:scale(0.98);
+    background-color: var(--primary-clr);
+    color: white;
 }
 
 
@@ -377,7 +394,11 @@ section.search
 
 @media screen and (max-width:600px) {
 
-    .heading .heading-menu
+    .heading .heading-icons .heading-share
+    {
+        margin-right: 14px;
+    }
+    .heading .heading-icons .heading-menu
     {
         display: block;
     }
