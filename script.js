@@ -199,10 +199,10 @@ function EventListeners(){
     search_country.addEventListener("keyup",()=>{
         filter = search_country.value.toLowerCase();
         if(filter){
-            continent_section.classList.add("hide");
+            if(window.screen.width > 600)continent_section.classList.add("hide");
             content_title.innerText = filter;   
         }else{
-            continent_section.classList.remove("hide");
+            if(window.screen.width > 600)continent_section.classList.remove("hide");
             content_title.innerText = "Country";
         }
         all_country.forEach(country=>{
