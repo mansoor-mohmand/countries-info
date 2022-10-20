@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Countries Info</title>
+</head>
+<body>
+    <header class="heading" id="header">
+        <div class="heading-content">
+            <i class="fa-solid fa-chevron-left heading-logo bg_m_effect" id="heading_logo" onclick="history.back()"></i>
+            <h4 class="heading-name" id="heading_name">COUNTRY</h4>
+        </div>
+        <i class="fa-solid fa-bars heading-menu" id="heading_menu"></i>
+    </header>
+    
+    <main class="wrapper">
+        <!-- heading info section -->
+        <section class="heading-info">
+            <div class="heading-info-content">
+                <p class="-content-description">Each & every details about</p>
+                <h2 class="content-title" id="content_title">Country</h2>
+            </div>
+        </section>
+        <!-- country brief informaion -->
+        <section class="country-brief-info" id="country_brief_info">
+            <div class="flag" id="flag">
+                <!-- flag image -->
+                <!-- <img src="https://flagcdn.com/w320/bq.png" alt="country flag"> -->
+            </div>
+            <div class="table" id="table">
+                <!-- brief info about thr specific country -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Flag</th>
+                            <th>Name</th>
+                            <th>Capital</th>
+                            <th>Population</th>
+                            <th>Continent</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+                        <!-- table data goes here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- country all require information -->
+        <section class="country-all-info" id="country_all_info">
+            <div class="all-info-heading">
+                <h4 class="heading-text">Details</h4>
+            </div>
+            <div class="all-info-content" id="all_info_content">
+                <!-- <ul class="list">
+                    <li class="list-items"><span class="item-head">Name</span><span class="item-data">Netherland</span></li>
+                    <li class="list-items"><span class="item-head">Official Name</span><span class="item-data">kingdom of the Netherlands</span></li>
+                    <li class="list-items"><span class="item-head">Native Name</span><span class="item-data">Koninkrijk der Nederland</span></li>
+                    <li class="list-items"><span class="item-head">Capital</span><span class="item-data">Amsterdom</span></li>
+                    <li class="list-items"><span class="item-head">Population</span><span class="item-data">16655799</span></li>
+                    <li class="list-items"><span class="item-head">Independent</span><span class="item-data">True</span></li>
+                    <li class="list-items"><span class="item-head">Region</span><span class="item-data">Europe</span></li>
+                    <li class="list-items"><span class="item-head">Subregion</span><span class="item-data">Western Europe</span></li>
+                    <li class="list-items"><span class="item-head">Official Languages</span><span class="item-data">Dutch</span></li>
+                    <li class="list-items"><span class="item-head">Other Languages</span><span class="item-data">English,Papiamento</span></li>
+                    <li class="list-items"><span class="item-head">Currency Name</span><span class="item-data">Euro</span></li>
+                    <li class="list-items"><span class="item-head">Currency Symbol</span><span class="item-data">€</span></li>
+                    <li class="list-items"><span class="item-head">Country Code</span><span class="item-data">+31</span></li>
+                    <li class="list-items"><span class="item-head">Borders</span><span class="item-data">Duetch,Belgium</span></li>
+                    <li class="list-items"><span class="item-head">Map</span><span class="item-data">Show</span></li>
+                </ul> -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
