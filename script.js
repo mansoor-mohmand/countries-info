@@ -221,15 +221,32 @@ function EventListeners(){
 
     OpenCountry.forEach(country=>{
         country.addEventListener("click",(e)=>{
-        let url = `./country/?CountryCode=${country.dataset.countrycode}`;
-        window.open(url,"_self");
+            let url = `./country/?CountryCode=${country.dataset.countrycode}`;
+            window.open(url,"_self");
+        });
     });
-});
 
     // heading_menu eventlistener
     const heading_menu = document.querySelector("#heading_menu");
     heading_menu.addEventListener("click",()=>{
         continent_section.classList.toggle("show");
+    });
+
+    // heading_share eventlistener
+    let heading_share = document.querySelector("#heading_share");
+    heading_share.EventListeners("click",()=>{
+        const share_data = {
+            title :"Countries Info",
+            text:document.querySelector("#content_title") || "Country Info.",
+            url:window.location.href
+        };
+
+        try{
+            navigator.share(share_data);
+            alert("Shared Successfully");
+        }catch(error){
+            alert(`Not Shared ${error}`);
+        }
     });
 
     // window on scroll
