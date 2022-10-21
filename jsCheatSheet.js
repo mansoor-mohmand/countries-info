@@ -54,6 +54,21 @@ class JS{
         return value;
     }
 
+    // ? share website
+    async Share()
+ {
+    let share_data = {
+        title :"Countries Info",
+        text:document.querySelector("#content_title").textContent || "Country Info.",
+        url:window.location.href
+    }
+    try{
+        await navigator.share(share_data);
+        alert("Shared Successfully");
+    }catch(error){
+        alert(`Not Shared ${error}`);
+    }
+ }
 
     
 }

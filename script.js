@@ -231,10 +231,6 @@ function EventListeners(){
      // heading_share eventlistener
      const heading_share = document.querySelector("#heading_share");
      heading_share.addEventListener("click",()=> {
-        // share_data.title = "Countries Info";
-        // share_data.text = document.querySelector("#content_title").textContent || "Country Info.";
-        // share_data.url = window.location.href;
-        // console.log(share_data);
          Share();
      });
 

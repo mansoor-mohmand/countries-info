@@ -94,8 +94,31 @@ const EventListeners = ()=>{
     window.addEventListener("scroll",()=>{
         (window.scrollY>0)?header.classList.add("change-bg"):header.classList.remove("change-bg");
     });
+
+    // heading_share eventlistener
+    const heading_share = document.querySelector("#heading_share");
+    heading_share.addEventListener("click",()=> {
+        Share();
+    });
+
+
 }
 
+
+async function Share()
+ {
+    let share_data = {
+        title :"Countries Info",
+        text:document.querySelector("#content_title").textContent || "Country Info.",
+        url:window.location.href
+    }
+    try{
+        await navigator.share(share_data);
+        alert("Shared Successfully");
+    }catch(error){
+        alert(`Not Shared ${error}`);
+    }
+ }
 
 
 // fetchCountry
