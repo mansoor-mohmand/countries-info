@@ -250,6 +250,8 @@ function EventListeners(){
          url:window.location.href
      }
 
+     console.log(share_data);
+
      try{
          await navigator.share(share_data);
          alert("Shared Successfully");
