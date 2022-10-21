@@ -17,9 +17,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.icon{
-    user-select: none;
-}
+
 
 body{
     font-weight: 400;
@@ -62,9 +60,13 @@ header.heading
 {
     color: var(--primary-clr);
 }
+.heading .heading-content .heading-name
+{
+    font-size: 18px;
+}
 .heading .heading-content .heading-logo
 {
-    margin-right: 8px;
+    margin-right: 10px;
     animation: rotation 10s infinite cubic-bezier(0.32, 0.50, 0.50, 0.96);
 }
 
@@ -72,7 +74,6 @@ header.heading
 {
     display: flex;
     color: var(--primary-clr);
-    font-size: 16px;
 }
 
 /* .heading .heading-icons .heading-share
@@ -83,6 +84,13 @@ header.heading
 .heading .heading-icons .heading-menu
 {
     display: none;
+}
+
+.icon{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
 }
 
 .bg_m_effect
@@ -96,11 +104,11 @@ header.heading
 .bg_m_effect::after
 {
     content:"";
-    width: 26px;
-    height: 25px;
+    width: 34px;
+    height: 34px;
     position:absolute;
-    top: -4.5px;
-    left: -5.6px;
+    top: -6.9px;
+    left: -8.8px;
     z-index: -1;
     background:transparent;
     border-radius:50%;
@@ -168,7 +176,11 @@ section.all-continents.hide
     align-items: center;
     justify-content: center;
     padding: 15px;
-
+    
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
     position: relative;
     overflow: hidden;
 
@@ -310,8 +322,12 @@ section.all-countries
     border:1px solid transparent;
     border-radius:var(--border-r);
     overflow: hidden;
-    user-select: none;
     cursor: pointer;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
 
     transition: all 0.15s;
 }
@@ -396,7 +412,7 @@ section.search
 
     .heading .heading-icons .heading-share
     {
-        margin-right: 14px;
+        margin-right: 16px;
     }
     .heading .heading-icons .heading-menu
     {
@@ -404,23 +420,26 @@ section.search
     }
     section.all-continents {
         position: fixed;
-        height: auto;
+        height: 100%;
         backdrop-filter: blur(1px);
         background: white;
         z-index: 200;
         padding-top: 57px;
         top: -950px;
-
         opacity: 0;
 
-        transition: all 0.15s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        transition: all 0.30s,
+        opacity 0.15s;
     }
 
     section.all-continents.show
     {
         top:0;
         opacity: 1;
-        transition: all 0.15s ease-in-out;
     }
     .all-continents .continent .continent-data {
         flex-direction: column;
@@ -433,11 +452,11 @@ section.search
     .all-continents .continent
     {
         background:#fff;
-        height: 99px;
+        height: 110px;
     }
     
     .all-continents .continent:hover
     {
-        height: 140px;
+        height: 160px;
     }
 }

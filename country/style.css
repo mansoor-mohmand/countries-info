@@ -17,11 +17,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.icon{
-    user-select: none;
-}
-
-
 
 body{
     font-weight: 400;
@@ -66,7 +61,7 @@ header.heading
 }
 .heading .heading-content .heading-logo
 {
-    margin-right: 8px;
+    margin-right: 10px;
     cursor: pointer;
 }
 
@@ -87,6 +82,13 @@ header.heading
     display: none;
 }
 
+.icon{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
+}
+
  .bg_m_effect
  {
      position: relative;
@@ -96,11 +98,11 @@ header.heading
  .bg_m_effect::after
  {
      content:"";
-     width: 26px;
-     height: 25px;
+     width: 34px;
+     height: 34px;
      position:absolute;
-     top: -4.5px;
-     left: -5.6px;
+     top: -6.9px;
+     left: -8.8px;
      z-index: -1;
      background:transparent;
      border-radius:50%;
@@ -263,7 +265,9 @@ section.country-all-info
     color: var(--primary-clr);
     font-size: 13px;
     font-weight: 400;
-    transform: scale(1);
+    user-select: none;
+    -webkit-user-select:none;
+    -webkit-tap-highlight-color:transparent;
     transition: all 0.15s;
 }
 
