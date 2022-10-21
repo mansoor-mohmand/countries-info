@@ -226,6 +226,19 @@ function EventListeners(){
         });
     });
 
+
+    
+     // heading_share eventlistener
+     const heading_share = document.querySelector("#heading_share");
+     heading_share.addEventListener("click",()=> {
+        // share_data.title = "Countries Info";
+        // share_data.text = document.querySelector("#content_title").textContent || "Country Info.";
+        // share_data.url = window.location.href;
+        // console.log(share_data);
+         Share();
+     });
+
+
     // heading_menu eventlistener
     const heading_menu = document.querySelector("#heading_menu");
     heading_menu.addEventListener("click",()=>{
@@ -241,24 +254,23 @@ function EventListeners(){
 
 }
 
- // heading_share eventlistener
- const heading_share = document.querySelector("#heading_share");
- heading_share.EventListeners("click",async ()=> {
-     var share_data = {
-         title :"Countries Info",
-         text:document.querySelector("#content_title") || "Country Info.",
-         url:window.location.href
-     }
 
-     console.log(share_data);
 
-     try{
-         await navigator.share(share_data);
-         alert("Shared Successfully");
-     }catch(error){
-         alert(`Not Shared ${error}`);
-     }
- });
+
+ async function Share()
+ {
+    let share_data = {
+        title :"Countries Info",
+        text:document.querySelector("#content_title").textContent || "Country Info.",
+        url:window.location.href
+    }
+    try{
+        await navigator.share(share_data);
+        alert("Shared Successfully");
+    }catch(error){
+        alert(`Not Shared ${error}`);
+    }
+ }
 // get all unique continents
 // const GetContinent=(data)=>{
 // let F=false;
